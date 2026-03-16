@@ -1,0 +1,172 @@
+<!DOCTYPE html><html>
+<head>
+<title>My School Memory</title><style>
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:linear-gradient(120deg,#ffd6e7,#ffffff);
+overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+text-align:center;
+padding:40px;
+background:#ff4da6;
+color:white;
+animation:fadeDown 1.5s;
+}
+
+/* STORY AREA */
+
+.story{
+max-width:900px;
+margin:auto;
+padding:30px;
+}
+
+/* STORY CARDS */
+
+.card{
+background:white;
+padding:25px;
+margin:25px 0;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+opacity:0;
+transform:translateY(40px);
+animation:fadeUp 1s forwards;
+}
+
+.card:nth-child(1){animation-delay:0.3s;}
+.card:nth-child(2){animation-delay:0.6s;}
+.card:nth-child(3){animation-delay:0.9s;}
+.card:nth-child(4){animation-delay:1.2s;}
+.card:nth-child(5){animation-delay:1.5s;}
+.card:nth-child(6){animation-delay:1.8s;}
+.card:nth-child(7){animation-delay:2.1s;}
+.card:nth-child(8){animation-delay:2.4s;}
+
+.card:hover{
+transform:scale(1.05);
+transition:0.3s;
+}
+
+h2{
+color:#ff4da6;
+}
+
+/* HEARTS */
+
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:20px;
+animation:float 8s linear infinite;
+color:#ff4da6;
+}
+
+@keyframes float{
+0%{transform:translateY(0);opacity:1;}
+100%{transform:translateY(-100vh);opacity:0;}
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeDown{
+from{
+opacity:0;
+transform:translateY(-40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+footer{
+text-align:center;
+padding:20px;
+color:gray;
+}
+
+</style></head><body><header>
+<h1>My Unforgettable School Story</h1>
+<p>A memory that stayed in my heart</p>
+</header><div class="story"><div class="card">
+<h2>First Day</h2>
+<p>
+When I changed my school in class 4, it was the first time in my life. 
+I felt awkward and nervous because I didn’t know how to talk to new friends.
+</p>
+</div><div class="card">
+<h2>Meeting Nirdesh</h2>
+<p>
+During break time a boy came and sat beside me. He asked random questions. 
+Later I found out his name was <b>Nirdesh Subedi</b> and he was the vice principal’s son.
+</p>
+</div><div class="card">
+<h2>Friends Warning</h2>
+<p>
+Some friends told me not to talk to him because they said he talked badly about others. 
+At that time I didn’t like him much.
+</p>
+</div><div class="card">
+<h2>Unexpected Friendship</h2>
+<p>
+But slowly we started talking and playing together. 
+Soon we became good friends.
+</p>
+</div><div class="card">
+<h2>The Dream</h2>
+<p>
+One night I dreamed someone stole my purse and a man in a black suit caught the thief 
+and returned it to me. When I looked closely, it was Nirdesh.
+</p>
+</div><div class="card">
+<h2>COVID Separation</h2>
+<p>
+Then COVID came and I changed my school again. 
+Even after years, my feelings for him didn’t disappear.
+</p>
+</div><div class="card">
+<h2>Confession</h2>
+<p>
+After almost seven years I told him my feelings through TikTok. 
+He rejected me and even blocked me because I kept messaging him.
+</p>
+</div><div class="card">
+<h2>Still a Memory</h2>
+<p>
+Even today I still remember him and those memories from school.
+</p>
+</div></div><footer>
+My School Memory Website
+</footer><!-- HEART ANIMATION --><script>
+
+function createHeart(){
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(Math.random()*20+10)+"px";
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+}
+
+setInterval(createHeart,500);
+
+</script></body>
+</html>
